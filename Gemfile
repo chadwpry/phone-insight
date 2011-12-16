@@ -10,6 +10,7 @@ gem "haml"
 
 # utility
 gem "newrelic_rpm"
+gem "rake", "0.8.7"
 gem "redis"
 #gem "simple_worker"
 gem "twilio-ruby"
