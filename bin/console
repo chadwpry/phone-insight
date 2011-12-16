@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+require "rubygems"
+require 'ruby-debug' if ENV["DEBUG"] == "true"
+require "irb"
+require "bundler"
+#Bundler.require :default,:development
+
+$:.unshift File.join(File.dirname(__FILE__), "..", "lib")
+
+require 'phone-insight'
+
+IRB.start
+

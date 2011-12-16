@@ -1,6 +1,6 @@
 = PhoneInsight
 
-A Sinatra Application to make phone calls
+A Sinatra application to queue phone requests, then call request target
 
 == Installation
 
