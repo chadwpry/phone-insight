@@ -7,10 +7,10 @@ begin
   TWILIO.merge!(YAML.load_file("config/twilio.yml")[PhoneInsight::Application.environment.to_s])
 rescue
   TWILIO.merge!({
-    :account_sid => ENV["TWILIO_ACCOUNT_SID"],
-    :auth_token  => ENV["TWILIO_AUTH_TOKEN"],
-    :from        => ENV["TWILIO_FROM_NUMBER"],
-    :url         => ENV["TWILIO_CALL_URL"]
+    "account_sid" => ENV["TWILIO_ACCOUNT_SID"],
+    "auth_token"  => ENV["TWILIO_AUTH_TOKEN"],
+    "from"        => ENV["TWILIO_FROM_NUMBER"],
+    "url"         => ENV["TWILIO_CALL_URL"]
   })
 end
 
