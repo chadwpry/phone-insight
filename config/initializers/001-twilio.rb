@@ -2,21 +2,19 @@ require 'yaml'
 require 'twilio-ruby'
 
 # put your own account credentials here:
-TWILIO = YAML.load_file("config/twilio.yml")
-
-unless TWILIO
-  TWILIO = {
+TWILIO = {}
+begin
+  TWILIO.merge!(YAML.load_file("config/twilio.yml")[PhoneInsight::Application.environment.to_s])
+rescue
+  TWILIO.merge!({
     :account_sid => ENV["TWILIO_ACCOUNT_SID"],
     :auth_token  => ENV["TWILIO_AUTH_TOKEN"],
     :from        => ENV["TWILIO_FROM_NUMBER"],
     :url         => ENV["TWILIO_CALL_URL"]
-  }
-  TWILIO_CALL_OPTIONS = {
-    :from => ENV["TWILIO_FROM_NUMBER"], :url => ENV["TWILIO_CALL_URL"]
-  }
+  })
 end
 
-TWILIO_CLIENT = Twilio::REST::Client.new TWILIO[:account_sid], TWILIO[:auth_token]
+TWILIO_CLIENT = Twilio::REST::Client.new TWILIO["account_sid"], TWILIO["auth_token"]
 
 ## set up
 #capability = Twilio::Util::Capability.new TWILIO[:account_sid], TWILIO[:auth_token]

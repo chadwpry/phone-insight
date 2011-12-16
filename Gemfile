@@ -10,6 +10,8 @@ gem "haml"
 
 # utility
 gem "newrelic_rpm"
+gem "redis"
+gem "simple_worker"
 gem "twilio-ruby"
 
 group :development do
