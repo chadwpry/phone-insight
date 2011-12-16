@@ -27,7 +27,7 @@ module PhoneInsight
     end
 
     get "/api/twilio/call" do
-      TwilioHelper.greeting
+      Helpers::TwilioHelper.greeting
     end
   end
 end
