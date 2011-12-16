@@ -27,6 +27,7 @@ module PhoneInsight
     end
 
     post "/api/twilio/call" do
+      content_type :xml
       Helpers::TwilioHelper.greeting
     end
   end
