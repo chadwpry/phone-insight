@@ -4,7 +4,7 @@ module PhoneInsight
   module Helpers
     module TwilioHelper
       def self.greeting
-        "config/twilio/messages/greeting.xml"
+        load_xml_response "config/twilio/messages/greeting.xml"
       end
 
       def load_response(path)
