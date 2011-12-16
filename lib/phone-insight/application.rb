@@ -20,7 +20,7 @@ module PhoneInsight
     use Rack::Logger
     use Rack::Session::Cookie
 
-    helpers PhoneInsight::TwilioHelper
+    helpers PhoneInsight::Helpers::TwilioHelper
 
     get "/" do
       haml :index
