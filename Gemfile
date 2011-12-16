@@ -13,11 +13,11 @@ gem "newrelic_rpm"
 gem "redis"
 #gem "simple_worker"
 gem "twilio-ruby"
-gem "typhoeus"
+#gem "typhoeus"
 
 group :development do
   gem "heroku"
   gem "rspec"
-  gem "unicorn"
+#  gem "unicorn"
 end
 

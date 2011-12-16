@@ -15,7 +15,6 @@ GEM
     json (1.6.3)
     jwt (0.1.4)
       json (>= 1.2.4)
-    kgio (2.7.0)
     launchy (2.0.5)
       addressable (~> 2.2.6)
     mime-types (1.17.2)
@@ -26,7 +25,6 @@ GEM
       rack
     rack-test (0.6.1)
       rack (>= 1.0)
-    raindrops (0.8.0)
     redis (2.2.2)
     rest-client (1.6.7)
       mime-types (>= 1.16)
@@ -59,12 +57,6 @@ GEM
       builder (>= 2.1.2)
       jwt (>= 0.1.2)
       multi_json (>= 1.0.3)
-    typhoeus (0.3.3)
-      mime-types
-    unicorn (4.1.1)
-      kgio (~> 2.4)
-      rack
-      raindrops (~> 0.6)
 
 PLATFORMS
   ruby
@@ -79,5 +71,3 @@ DEPENDENCIES
   sinatra-initializers
   sinatra-reloader
   twilio-ruby
-  typhoeus
-  unicorn
