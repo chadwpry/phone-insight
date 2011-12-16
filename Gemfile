@@ -11,7 +11,7 @@ gem "haml"
 # utility
 gem "newrelic_rpm"
 gem "redis"
-gem "simple_worker"
+#gem "simple_worker"
 gem "twilio-ruby"
 gem "typhoeus"
 
