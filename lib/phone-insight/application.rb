@@ -26,7 +26,7 @@ module PhoneInsight
       haml :index
     end
 
-    get "/api/twilio/call" do
+    post "/api/twilio/call" do
       Helpers::TwilioHelper.greeting
     end
   end
