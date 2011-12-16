@@ -13,6 +13,7 @@ gem "newrelic_rpm"
 gem "redis"
 gem "simple_worker"
 gem "twilio-ruby"
+gem "typhoeus"
 
 group :development do
   gem "heroku"

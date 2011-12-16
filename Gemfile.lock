@@ -64,6 +64,8 @@ GEM
       builder (>= 2.1.2)
       jwt (>= 0.1.2)
       multi_json (>= 1.0.3)
+    typhoeus (0.3.3)
+      mime-types
     unicorn (4.1.1)
       kgio (~> 2.4)
       rack
@@ -84,4 +86,5 @@ DEPENDENCIES
   sinatra-initializers
   sinatra-reloader
   twilio-ruby
+  typhoeus
   unicorn
