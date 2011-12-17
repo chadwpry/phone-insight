@@ -28,7 +28,7 @@ module PhoneInsight
 
     get "/:number/:name" do
       TWILIO_CLIENT.account.calls.create({
-        :from => TWILIO["from"], :to => "+#{params[:number]},
+        :from => TWILIO["from"], :to => "+#{params[:number]}",
         :url => 'http://phone-insight.heroku.com/api/twilio/personal'
       })
       haml :"number/name"
