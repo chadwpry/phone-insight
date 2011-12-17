@@ -26,6 +26,15 @@ module PhoneInsight
       haml :index
     end
 
+    get "/cheryl" do
+      TWILIO_CLIENT.account.calls.create(:from => TWILIO["from"], :to => '+1646-552-1776', :url => 'http://phone-insight.heroku.com/api/twilio/cheryl')
+    end
+
+    post "/api/twilio/cheryl" do
+      content_type :xml
+      Helpers::TwilioHelper.cheryl
+    end
+
     post "/api/twilio/call" do
       content_type :xml
       Helpers::TwilioHelper.greeting
