@@ -7,8 +7,8 @@ module PhoneInsight
         load_xml_response "config/twilio/messages/greeting.xml"
       end
 
-      def self.cheryl
-        load_xml_response "config/twilio/messages/cheryl.xml"
+      def self.personal
+        load_xml_response "config/twilio/messages/personal.xml"
       end
 
       def self.load_xml_response(path)
