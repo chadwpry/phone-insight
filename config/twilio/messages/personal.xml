@@ -1,6 +1,11 @@
 <Response>
   <Pause length="2"/>
-  <Say>Hello Cheryl</Say>
+  <Say voice="woman" language="en-gb">Hello Cheryl</Say>
+  <Pause/>
+  <Say language="en-gb">Hello Cheryl</Say>
+  <Pause/>
+  <Say voice="woman" language="de">Hello Cheryl</Say>
+  <Pause/>
   <Play>http://phone-insight.heroku.com/clips/play_a_game.mp3</Play>
 <!--
   <Say>
