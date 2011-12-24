@@ -28,7 +28,7 @@ module PhoneInsight
 
     get "/:number/:name" do
       require 'cgi'
-      url = "http://phone-insight.heroku.com/api/twilio/personal?#{CGI.escape(params[:url] || "http://phone-insight.heroku.com/clips/aqua-teen-hunger-force.mp3"}}"
+      url = "http://phone-insight.heroku.com/api/twilio/personal?#{CGI.escape(params[:url] || "http://phone-insight.heroku.com/clips/aqua-teen-hunger-force.mp3")}"
       TWILIO_CLIENT.account.calls.create({
         :from => TWILIO["from"], :to => "+#{params[:number]}",
         :url => url
