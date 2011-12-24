@@ -1,5 +1,8 @@
 <Response>
+  <Play>http://phone-insight.heroku.com/clips/play_a_game.mp3</Play>
+<!--
   <Say>
     Shall we play a game?
   </Say>
+-->
 </Response>
