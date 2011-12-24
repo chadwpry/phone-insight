@@ -54,7 +54,7 @@ module PhoneInsight
     end
 
     post "/api/twilio/record/greeting/for/:number" do
-      erb :"twilio/record_greeting", :locals => { :number => params[:number }
+      erb :"twilio/record_greeting", :locals => { :number => params[:number] }
     end
 
     post "/api/twilio/call" do
