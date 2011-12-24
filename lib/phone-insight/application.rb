@@ -38,10 +38,23 @@ module PhoneInsight
 
     post "/api/twilio/personal" do
       content_type :xml
-      erb :"twilio/play_a_clip", :locals => {
-        :clip => params[:url]
-      }
+      erb :"twilio/play_a_clip", :locals => { :clip => params[:url] }
 #      Helpers::TwilioHelper.personal
+    end
+
+    get "/record/greeting/for/:number" do
+      TWILIO_CLIENT.account.calls.create({
+        :from => TWILIO["from"], :to => "+#{params[:number]}",
+        :url => "http://phone-insight.heroku.com/api/twilio/record/greeting/for/#{params[:number]}"
+      })
+    end
+
+    get "/recorded/message/for/:number" do
+      puts "params: #{params}"
+    end
+
+    post "/api/twilio/record/greeting/for/:number" do
+      erb :"twilio/record_greeting", :locals => { :number => params[:number }
     end
 
     post "/api/twilio/call" do
