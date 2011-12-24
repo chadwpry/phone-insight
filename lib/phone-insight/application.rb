@@ -29,14 +29,18 @@ module PhoneInsight
     get "/:number/:name" do
       TWILIO_CLIENT.account.calls.create({
         :from => TWILIO["from"], :to => "+#{params[:number]}",
-        :url => 'http://phone-insight.heroku.com/api/twilio/personal'
+        :url => 'http://phone-insight.heroku.com/api/twilio/personal',
+        :sound_url => params[:url] || "http://phone-insight.heroku.com/clips/aqua-teen-hunger-force.mp3"
       })
       haml :"number/name"
     end
 
     post "/api/twilio/personal" do
       content_type :xml
-      Helpers::TwilioHelper.personal
+      erb :"twilio/play_a_clip", :locals => {
+        :clip => params[:sound_url]
+      }
+#      Helpers::TwilioHelper.personal
     end
 
     post "/api/twilio/call" do

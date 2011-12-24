@@ -1,11 +1,3 @@
 <Response>
-  <Pause/>
-  <Say voice="woman" language="en">Thank you for contacting me.  As a gift, here is a clip for you.</Say>
-  <Pause/>
   <Play>http://phone-insight.heroku.com/clips/aqua-teen-hunger-force.mp3</Play>
-<!--
-  <Say>
-    Shall we play a game?
-  </Say>
--->
 </Response>
